@@ -1,1 +1,10 @@
-<p>header works!</p>
+<div *ngIf="($isLoading | async) === false; else loading">
+  <p>Обмін Валют</p>
+  <p *ngFor="let currency of ($currencies | async)?.data | keyvalue">
+    {{ currency.value.code }}
+    {{ hryvna!.value / currency.value.value | number : '1.2-2' }}
+  </p>
+</div>
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>
