@@ -1,10 +1,8 @@
-<div
-  *ngIf="($isLoading | async) === false; else loading"
-  class="wrapper">
+<div *ngIf="($isLoading | async) === false; else loading" class="wrapper">
   <p class="title">Обмін Валют</p>
   <p *ngFor="let currency of ($currencies | async)!.data | keyvalue">
     {{ currency.value.code }}
-    {{ hryvna!.value / currency.value.value }}
+    {{ hryvna!.value / currency.value.value | number : '1.2-2' }}
   </p>
 </div>
 <ng-template #loading>
