@@ -2,9 +2,11 @@ export interface ICurrencies {
   meta: {
     last_updated_at: string;
   };
-  data: {
-    [key: string]: ICurrency;
-  };
+  data: ICurrenciesData
+}
+
+export interface ICurrenciesData{
+  [key: string]: ICurrency;
 }
 
 export interface ICurrency {

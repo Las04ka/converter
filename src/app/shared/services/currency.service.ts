@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 
 import { ICurrencies } from 'src/app/shared/interfaces/currencies';
 
+//I would like to create env but there is no need
 const apiUrl = 'https://api.currencyapi.com/v3/latest';
 const apiKey = 'cEvX7BCwmmaawg3001rkjydJmISykSOfBUyX6GlD';
 

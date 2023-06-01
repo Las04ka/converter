@@ -1,6 +1,30 @@
-:host {
-  background-color: #112233;
+.wrapper {
+  height: 70px;
+  padding: 0 200px;
+  background-color: #1c453c;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 p {
   margin: 0;
+}
+
+.loader {
+  background-color: rgba(0, 0, 0, 0.446);
+  position: fixed;
+  width: 85%;
+  margin: 0 auto;
+  z-index: 3;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

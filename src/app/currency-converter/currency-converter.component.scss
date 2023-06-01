@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  padding: 30px 250px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currency-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.compare-icon {
+  scale: 4;
+  color: #1c453c;
+}

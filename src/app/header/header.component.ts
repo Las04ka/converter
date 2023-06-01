@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { map, tap } from 'rxjs';
 
@@ -15,7 +15,7 @@ import { AppState } from 'src/app/state/state';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   hryvna?: ICurrency;
   $currencies? = this.store.select(selectCurrencies).pipe(
     tap((el) => (this.hryvna = el.data['UAH'])),
@@ -26,9 +26,7 @@ export class HeaderComponent implements OnInit {
     }),
   );
   $isLoading = this.store.select(selectCurrenciesLoading);
-  constructor(private store: Store<AppState>) {}
-
-  ngOnInit(): void {
+  constructor(private store: Store<AppState>) {
     this.store.dispatch(loadCurrencies());
   }
 }
